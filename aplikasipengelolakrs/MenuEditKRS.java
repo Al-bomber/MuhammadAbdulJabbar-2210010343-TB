@@ -15,12 +15,12 @@ import javax.swing.JOptionPane;
  *
  * @author ACER
  */
-public class MenuInputKRS extends javax.swing.JFrame {
+public class MenuEditKRS extends javax.swing.JFrame {
 
     /**
-     * Creates new form MenuInputKRS
+     * Creates new form MenuEditKRS
      */
-    public MenuInputKRS() {
+    public MenuEditKRS() {
         initComponents();
     }
     
@@ -54,8 +54,8 @@ public class MenuInputKRS extends javax.swing.JFrame {
         matkul04 = new javax.swing.JComboBox<>();
         matkul05 = new javax.swing.JComboBox<>();
         matkul06 = new javax.swing.JComboBox<>();
-        btnInputKRS = new javax.swing.JButton();
-        btnUlangKRS = new javax.swing.JButton();
+        btnEditKRS = new javax.swing.JButton();
+        btnBatal = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         txtNama = new javax.swing.JTextField();
@@ -66,7 +66,7 @@ public class MenuInputKRS extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Input KRS Di Sini"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Edit Data KRS Di Sini"));
 
         jLabel2.setText("Pilih Semester");
 
@@ -100,17 +100,17 @@ public class MenuInputKRS extends javax.swing.JFrame {
 
         matkul06.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "- Pilih Mata Kuliah Yang Ingin Diambil -", "Pemprograman Visual 1", "Pemprograman Visual 2", "RPL", "PBO 1", "PBO 2", "PBO 3", "Multimedia", "Web 1", "Web 2", "Android 1", "Android 2", "Rangkaian Digital", "Statistik", "Analisis Sistem" }));
 
-        btnInputKRS.setText("Input KRS");
-        btnInputKRS.addActionListener(new java.awt.event.ActionListener() {
+        btnEditKRS.setText("Edit KRS");
+        btnEditKRS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnInputKRSActionPerformed(evt);
+                btnEditKRSActionPerformed(evt);
             }
         });
 
-        btnUlangKRS.setText("Ulang");
-        btnUlangKRS.addActionListener(new java.awt.event.ActionListener() {
+        btnBatal.setText("Batal");
+        btnBatal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUlangKRSActionPerformed(evt);
+                btnBatalActionPerformed(evt);
             }
         });
 
@@ -152,9 +152,9 @@ public class MenuInputKRS extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(btnInputKRS)
+                                .addComponent(btnEditKRS)
                                 .addGap(18, 18, 18)
-                                .addComponent(btnUlangKRS)
+                                .addComponent(btnBatal)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addComponent(matkul06, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -225,18 +225,16 @@ public class MenuInputKRS extends javax.swing.JFrame {
                     .addComponent(matkul06, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnInputKRS)
-                    .addComponent(btnUlangKRS))
+                    .addComponent(btnEditKRS)
+                    .addComponent(btnBatal))
                 .addGap(15, 15, 15))
         );
-
-        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("MENU INPUT KRS");
+        jLabel1.setText("MENU EDIT KRS");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -255,18 +253,44 @@ public class MenuInputKRS extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel2, java.awt.BorderLayout.PAGE_START);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 673, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 483, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, 0)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnInputKRSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInputKRSActionPerformed
+    private void btnEditKRSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditKRSActionPerformed
         if (txtNama.getText().isEmpty() || txtNPM.getText().isEmpty() || pilihSemester.getSelectedIndex() == 0 || pilihKelas.getSelectedIndex() == 0 || matkul01.getSelectedIndex() == 0 || matkul02.getSelectedIndex() == 0 || matkul03.getSelectedIndex() == 0 || matkul04.getSelectedIndex() == 0 || matkul05.getSelectedIndex() == 0 || matkul06.getSelectedIndex() == 0){
-            JOptionPane.showMessageDialog(null, "Ada Data Yang Belum Diisi!!", "Gagal Menambahkan Data", 2); // untuk menampilkan pesan peringatan
+            JOptionPane.showMessageDialog(null, "Ada Data Yang Belum Diisi!!", "Gagal Mengubah Data", 2); // untuk menampilkan pesan peringatan
         } else {
             try {
-                String dbTambah = "INSERT INTO krs VALUES (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);"; 
-                pst = con.prepareStatement(dbTambah);
+                int row = MenuCekKRS.tableKRS.getSelectedRow();
+                id = MenuCekKRS.tableKRS.getValueAt(row, 0).toString();
+                
+                String dbUbah = "UPDATE krs SET nama = ?, npm = ?, semester = ?, kelas = ?, matkul_1 = ?, matkul_2 = ?, matkul_3 = ?, matkul_4 = ?, matkul_5 = ?, matkul_6 = ? WHERE id = ?;";
+                pst = con.prepareStatement(dbUbah);
                 pst.setString(1, txtNama.getText());
                 pst.setString(2, txtNPM.getText());
                 pst.setString(3, pilihSemester.getSelectedItem().toString());
@@ -277,27 +301,34 @@ public class MenuInputKRS extends javax.swing.JFrame {
                 pst.setString(8, matkul04.getSelectedItem().toString());
                 pst.setString(9, matkul05.getSelectedItem().toString());
                 pst.setString(10, matkul06.getSelectedItem().toString());
+                pst.setString(11, id);
                 pst.executeUpdate();
-                
-                JOptionPane.showMessageDialog(null, "Data Berhasil Ditambahkan!!", "Sukses Menambahkan Data", 1); // untuk menampilkan pesan informasi
-                cleanField(); // memanggil method cleanField()
-            } catch (SQLException ex) {
-                Logger.getLogger(MenuInputKRS.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-    }//GEN-LAST:event_btnInputKRSActionPerformed
 
-    private void btnUlangKRSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUlangKRSActionPerformed
-        cleanField();
-    }//GEN-LAST:event_btnUlangKRSActionPerformed
+                JOptionPane.showMessageDialog(null, "Data Berhasil Diubah!!", "Sukses Mengubah Data", 1); // untuk menampilkan pesan informasi
+                
+                MenuCekKRS cek = new MenuCekKRS();
+                cek.setVisible(true);
+                dispose();
+            } catch (SQLException ex) {
+                Logger.getLogger(MenuEditKRS.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+        }
+    }//GEN-LAST:event_btnEditKRSActionPerformed
+
+    private void btnBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBatalActionPerformed
+        MenuCekKRS cek = new MenuCekKRS();
+        cek.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnBatalActionPerformed
 
     private void txtNPMKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNPMKeyTyped
         char c = evt.getKeyChar();
-                
+
         if (!Character.isDigit(c)) {
             evt.consume();
         }
-        
+
         if (txtNPM.getText().length() >= 12) {
             JOptionPane.showMessageDialog(null, "Angka Yang Dimasukkan Harus tidak lebih dari 12!!", "Peringatan", 2);
             evt.consume();
@@ -321,27 +352,27 @@ public class MenuInputKRS extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MenuInputKRS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuEditKRS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MenuInputKRS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuEditKRS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MenuInputKRS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuEditKRS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MenuInputKRS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuEditKRS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MenuInputKRS().setVisible(true);
+                new MenuEditKRS().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnInputKRS;
-    private javax.swing.JButton btnUlangKRS;
+    private javax.swing.JButton btnBatal;
+    private javax.swing.JButton btnEditKRS;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -355,28 +386,19 @@ public class MenuInputKRS extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JComboBox<String> matkul01;
-    private javax.swing.JComboBox<String> matkul02;
-    private javax.swing.JComboBox<String> matkul03;
-    private javax.swing.JComboBox<String> matkul04;
-    private javax.swing.JComboBox<String> matkul05;
-    private javax.swing.JComboBox<String> matkul06;
-    private javax.swing.JComboBox<String> pilihKelas;
-    private javax.swing.JComboBox<String> pilihSemester;
-    private javax.swing.JTextField txtNPM;
-    private javax.swing.JTextField txtNama;
+    public static javax.swing.JComboBox<String> matkul01;
+    public static javax.swing.JComboBox<String> matkul02;
+    public static javax.swing.JComboBox<String> matkul03;
+    public static javax.swing.JComboBox<String> matkul04;
+    public static javax.swing.JComboBox<String> matkul05;
+    public static javax.swing.JComboBox<String> matkul06;
+    public static javax.swing.JComboBox<String> pilihKelas;
+    public static javax.swing.JComboBox<String> pilihSemester;
+    public static javax.swing.JTextField txtNPM;
+    public static javax.swing.JTextField txtNama;
     // End of variables declaration//GEN-END:variables
 
     private void cleanField() {
-        txtNama.setText("");
-        txtNPM.setText("");
-        pilihSemester.setSelectedIndex(0);
-        pilihKelas.setSelectedIndex(0);
-        matkul01.setSelectedIndex(0);
-        matkul02.setSelectedIndex(0);
-        matkul03.setSelectedIndex(0);
-        matkul04.setSelectedIndex(0);
-        matkul05.setSelectedIndex(0);
-        matkul06.setSelectedIndex(0);
+        
     }
 }

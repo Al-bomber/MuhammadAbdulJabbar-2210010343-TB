@@ -29,6 +29,7 @@ public class MenuCekKRS extends javax.swing.JFrame {
         showData();
         btnHapusKRS.setEnabled(false);
         btnCetakKRS.setEnabled(false);
+        btnEditKRS.setEnabled(false);
     }
     
     String id;
@@ -52,6 +53,7 @@ public class MenuCekKRS extends javax.swing.JFrame {
         txtCariData = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         btnCetakKRS = new javax.swing.JButton();
+        btnEditKRS = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -101,6 +103,13 @@ public class MenuCekKRS extends javax.swing.JFrame {
             }
         });
 
+        btnEditKRS.setText("Edit KRS");
+        btnEditKRS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditKRSActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -118,6 +127,8 @@ public class MenuCekKRS extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnCetakKRS)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnEditKRS)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnHapusKRS)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -131,7 +142,8 @@ public class MenuCekKRS extends javax.swing.JFrame {
                     .addComponent(btnCariData)
                     .addComponent(txtCariData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
-                    .addComponent(btnCetakKRS))
+                    .addComponent(btnCetakKRS)
+                    .addComponent(btnEditKRS))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -143,7 +155,7 @@ public class MenuCekKRS extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("MENU INPUT KRS");
+        jLabel1.setText("MENU CEK KRS");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -192,6 +204,8 @@ public class MenuCekKRS extends javax.swing.JFrame {
     private void tableKRSMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableKRSMouseClicked
         int row = tableKRS.getSelectedRow();
         id = tableKRS.getValueAt(row, 0).toString();
+        
+        btnEditKRS.setEnabled(true);
         btnHapusKRS.setEnabled(true);
         btnCetakKRS.setEnabled(true);
     }//GEN-LAST:event_tableKRSMouseClicked
@@ -229,6 +243,26 @@ public class MenuCekKRS extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_btnCetakKRSActionPerformed
+
+    private void btnEditKRSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditKRSActionPerformed
+        MenuEditKRS edit = new MenuEditKRS();
+        edit.setVisible(true);
+        
+        int row = tableKRS.getSelectedRow();
+        id = tableKRS.getValueAt(row, 0).toString();
+        MenuEditKRS.txtNama.setText(tableKRS.getValueAt(row, 1).toString());
+        MenuEditKRS.txtNPM.setText(tableKRS.getValueAt(row, 2).toString());
+        MenuEditKRS.pilihSemester.setSelectedItem(tableKRS.getValueAt(row, 3).toString());
+        MenuEditKRS.pilihKelas.setSelectedItem(tableKRS.getValueAt(row, 4).toString());
+        MenuEditKRS.matkul01.setSelectedItem(tableKRS.getValueAt(row, 5).toString());
+        MenuEditKRS.matkul02.setSelectedItem(tableKRS.getValueAt(row, 6).toString());
+        MenuEditKRS.matkul03.setSelectedItem(tableKRS.getValueAt(row, 7).toString());
+        MenuEditKRS.matkul04.setSelectedItem(tableKRS.getValueAt(row, 8).toString());
+        MenuEditKRS.matkul05.setSelectedItem(tableKRS.getValueAt(row, 9).toString());
+        MenuEditKRS.matkul06.setSelectedItem(tableKRS.getValueAt(row, 10).toString());
+        
+        dispose();
+    }//GEN-LAST:event_btnEditKRSActionPerformed
 
     /**
      * @param args the command line arguments
@@ -268,13 +302,14 @@ public class MenuCekKRS extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCariData;
     private javax.swing.JButton btnCetakKRS;
+    private javax.swing.JButton btnEditKRS;
     private javax.swing.JButton btnHapusKRS;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tableKRS;
+    public static javax.swing.JTable tableKRS;
     private javax.swing.JTextField txtCariData;
     // End of variables declaration//GEN-END:variables
 
